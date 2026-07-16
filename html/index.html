@@ -5,13 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome SKALA</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+        }
+
+        nav a {
+            padding: 8px 9px;
+            border-radius: 3px;
+            text-decoration: none;
+            color: white;
+            background-color: #4f92db;
+            transition: background-color 0.3s, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e8c37e;
+            color: #fff;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        aside {
+            width: 300px;
+            padding: 20px;
+            background-color: #c9d7f2;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>김주오의 유니버스</h1>
         <p>저의 프로필, 학습 내용, 여행 기록을 모다운 Hub 페이지입니다.</p>
+    </header>
     <nav>
         <h3>🗂️ 바로가기 메뉴</h3>
+
         <ul>
             <li><a href="myProfile.html">나의 프로필</a></li>
             <li><a href="myTrip.html">나의 여행지</a></li>
@@ -20,6 +71,22 @@
             <li><a href="myClass.html">나의 수업시간표</a></li>
         </ul>
     </nav>
+    <div class="content">
+        <main>
+        <h2>📌 SKALA 광주 3반 2조의 Hub 페이지</h2>
+        <p>이 페이지는 HTML, CSS, JavaScript를 활용하여 제작되었습니다.</p>
+        <p>아직 하는중</p>
+    </main>
+    <aside>
+        <h3>📌 참고 사항</h3>
+        <p>이 페이지는 HTML, CSS, JavaScript를 활용하여 제작되었습니다.</p>
+        <p>아직 하는중</p>
+    </aside>
+    </div>
+    <footer>
+        <p>© 2024 김주오. All rights reserved.</p>
+        <p>아직 하는중</p>
+    </footer>
     아직 하는중
 </body>
 </html>
