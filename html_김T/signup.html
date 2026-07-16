@@ -14,11 +14,12 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px;
+            padding: 10px;
             box-sizing: border-box;
-            background-color: white;
+            background-color: rgb(240, 241, 142);
             z-index: 100;
             border-bottom: 1px solid #ccc;
+            border-radius: 0px 0px 10px 10px;
         }
 
         .container {
@@ -42,7 +43,7 @@
                 <p>
                     <label for="userID">아이디: </label>
                     <input type="text" id="userID" name="userID"
-                    required placeholder="4~15자 영문/숫자" pattern="[A-Za-z0-9]{4,12}"> 
+                    required minlength="4" maxlength="12" placeholder="4~15자 영문/숫자" pattern="[A-Za-z0-9]{4,12}"> 
                     <small>(필수)</small>
                 </p>
                 <p>
@@ -53,14 +54,15 @@
                 </p>
                 <p>
                     <label for="phoneNum">전화번호: </label>
-                    <input type="tel" id="phoneNum" name="phoneNum" required placeholder="010-0000-0000">
+                    <input type="tel" id="phoneNum" name="phoneNum" required 
+                    pattern="010-[0-9]{4}-[0-9]{4}" title="010-0000-0000 형식으로 입력해주세요" placeholder="010-0000-0000">
                     <small>(필수)</small>
                 </p>
                 <p>
                     <label for="userEmail">이메일: </label>
                     <input type="text" id="userEmail" name="userEmail" required placeholder="example">
                     @
-                    <select name="emailDomain">
+                    <select name="emailDomain" required>
                         <option value="" disabled selected>-- 선택해주세요 --</option>
                         <option value="direct">직접 입력</option>
                         <option value="naver.com">naver.com</option>
@@ -97,12 +99,12 @@
                     <label><input type="checkbox" name="interest" value="ai"> 인공지능 (AI)</label><br>
                 </p>
                 <p>
-                    <label for="joinPath">가입 경로: </label>
-                    <select id="joinPath" name="joinPath">
+                    <label for="homeRegion">지역: </label>
+                    <select id="homeRegion" name="homeRegion">
                         <option value="" disabled selected>-- 선택해주세요 --</option>
-                        <option value="search">인터넷 검색</option>
-                        <option value="friend">친구 추천</option>
-                        <option value="sns">SNS 광고</option>
+                        <option value="seoul">서울/경기</option>
+                        <option value="busan">부산/경상도</option>
+                        <option value="gwangju">광주/전라도</option>
                         <option value="other">기타</option>
                     </select>
             </fieldset>
@@ -111,13 +113,15 @@
                 <legend>자기소개</legend>
                 <p>
                     <label for="intro">나를 표현하는 한 줄 소개 또는 가입 인사:</label><br>
-                    <textarea id="intro" name="intro" rows="5" cols="50" placeholder="여기에 내용을 입력하세요 (최대 200자)"></textarea>
+                    <textarea id="intro" name="intro" rows="5" cols="50" 
+                    placeholder="여기에 내용을 입력하세요 (최대 200자)"> </textarea>
                 </p>
             </fieldset>
 
             <br>
             <p>
-                <input type="checkbox" name="agree" required> <label for="agree">개인정보 수집 및 이용에 동의합니다. (필수)</label>
+                <input type="checkbox" id="agree" name="agree" required> 
+                <label for="agree">개인정보 수집 및 이용에 동의합니다. (필수)</label>
             </p>
             <input type="submit" class="btn-submit" value="동의하고 회원가입">
             <input type="reset" class="btn-reset" value="다시 작성">

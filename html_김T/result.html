@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>회원가입 결과</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #f5f6f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            width: 170px;
+            background-color: #f0f2f5;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 18px;
+            color: white;
+            background-color: #3478f6;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>회원가입 결과</h1>
+
+        <table>
+            <tbody id="resultTable"></tbody>
+        </table>
+
+        <a href="javascript:history.back()" class="btn-back">이전 페이지로</a>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(location.search);
+        const resultTable = document.getElementById("resultTable");
+
+        const genderNames = {
+            male: "남성",
+            female: "여성",
+            none: "선택 안함"
+        };
+
+        const interestNames = {
+            frontend: "웹 프론트엔드 (Vue.js/HTML)",
+            backend: "웹 백엔드 (Node.js/Python)",
+            uiux: "UI/UX 디자인 표준",
+            ai: "인공지능 (AI)"
+        };
+
+        const homeRegionNames = {
+            seoul: "서울/경기",
+            busan: "부산/경상도",
+            gwangju: "광주/전라도",
+            other: "기타"
+        };
+
+        function addRow(title, value) {
+            const row = document.createElement("tr");
+            const header = document.createElement("th");
+            const cell = document.createElement("td");
+
+            header.textContent = title;
+            cell.textContent = value || "입력하지 않음";
+
+            row.append(header, cell);
+            resultTable.appendChild(row);
+        }
+
+        const userEmail = params.get("userEmail");
+        const emailDomain = params.get("emailDomain");
+
+        // 같은 name을 가진 체크박스 값을 배열로 모두 가져옵니다.
+        const interests = params.getAll("interest");
+        const interestText = interests
+            .map(value => interestNames[value] || value)
+            .join(", ");
+
+        addRow("이름", params.get("userName"));
+        addRow("아이디", params.get("userID"));
+
+        // 보안상 비밀번호의 실제 값은 결과 화면에 표시하지 않습니다.
+        addRow(
+            "비밀번호",
+            params.has("userPw") ? "입력 완료 (보안상 표시하지 않음)" : ""
+        );
+
+        addRow("전화번호", params.get("phoneNum"));
+
+        addRow(
+            "이메일",
+            userEmail && emailDomain
+                ? `${userEmail}@${emailDomain}`
+                : ""
+        );
+
+        addRow(
+            "생년월일",
+            params.get("userBirth")
+        );
+
+        addRow(
+            "성별",
+            genderNames[params.get("gender")] || ""
+        );
+
+        addRow(
+            "관심 분야",
+            interestText
+        );
+
+        addRow(
+            "가입 경로",
+            joinPathNames[params.get("joinPath")] || ""
+        );
+
+        addRow(
+            "자기소개",
+            params.get("intro")
+        );
+
+        addRow(
+            "개인정보 이용 동의",
+            params.has("agree") ? "동의함" : "동의하지 않음"
+        );
+    </script>
+</body>
+</html>
