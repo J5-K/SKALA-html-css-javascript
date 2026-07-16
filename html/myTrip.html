@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 여행지</title>
+    <style>
+        .trip-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .trip-card {
+            margin: 0;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .trip-card img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
