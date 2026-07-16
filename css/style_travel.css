@@ -1,0 +1,13 @@
+.hero {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(241, 188, 188, 0.305),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("../media/고흥우주센터.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
