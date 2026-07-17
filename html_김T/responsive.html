@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>올 여름 보고 싶은 영화</title>
+  <link rel="stylesheet" href="../css/style_respo.css" />
+</head>
+<body>
+  <nav class="topbar" aria-label="주요 메뉴">
+    <a class="topbar__logo" href="#">MOVIE PICK</a>
+
+    <div class="topbar__right">
+      <ul class="topbar__menu">
+        <li><a href="#movies">영화 목록</a></li>
+        <li><a href="#">개봉 예정작</a></li>
+        <li><a href="#">나의 목록</a></li>
+      </ul>
+
+      <button
+        class="theme-button"
+        id="themeButton"
+        type="button"
+        aria-label="다크 모드로 전환"
+        aria-pressed="false"
+      >🌙</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="hero__eyebrow">MY MOVIE LIST</p>
+    <h1 class="hero__title">올 여름 보고 싶은 영화</h1>
+    <p class="hero__description">
+      극장에서 만나고 싶은 영화들을 한곳에 모았습니다.
+    </p>
+  </header>
+
+  <main>
+    <section id="movies" class="movie-gallery" aria-label="올 여름 보고 싶은 영화 목록">
+      <article class="movie-card">
+        <div class="movie-card__poster">
+          <img class="movie-card__image" src="../media/poster_hope.jpg" alt="영화 호프 포스터" />
+          <span class="movie-card__badge">개봉작</span>
+        </div>
+        <div class="movie-card__content">
+          <span class="movie-card__genre">SF · 스릴러</span>
+          <h2 class="movie-card__title">호프</h2>
+          <p class="movie-card__description">
+            지원해 줄 인력들은 산불을 끄러 갔고, 이젠 통신도 두절됐다.
+            호포 출장소의 ‘범석’과 ‘성애’는 노인들뿐인 마을을 지키기 위해 사투를 벌이고,
+            놈을 쫓아 산으로 향했던 청년들과 ‘성기’는 되려 놈들의 사냥감이 되어 버린다.
+            무지가 빚어낸 불행의 씨앗은 입장의 차이를 거쳐 온 우주의 비극이 되고야 만다.
+          </p>
+          <div class="movie-card__footer">
+            <span class="movie-card__status">보고 싶어요</span>
+            <a class="movie-card__button" href="https://cgv.co.kr/cnm/cgvChart/movieChart/30001297">영화 정보</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <div class="movie-card__poster">
+          <img class="movie-card__image" src="../media/poster_spiderman.jpg" alt="영화 스파이더맨: 브랜드 뉴 데이 포스터" />
+          <span class="movie-card__badge">7/29 개봉</span>
+        </div>
+        <div class="movie-card__content">
+          <span class="movie-card__genre">액션 · 슈퍼히어로</span>
+          <h2 class="movie-card__title">스파이더맨: 브랜드 뉴 데이</h2>
+          <p class="movie-card__description">
+            세상 모두에게 잊힌 피터 파커 그의 정체를 기억하는 역대급 빌런의 등장 시리즈 사상 가장 통제할 수 없는 대결이 시작된다!
+          </p>
+          <div class="movie-card__footer">
+            <span class="movie-card__status">보고 싶어요</span>
+            <a class="movie-card__button" href="https://cgv.co.kr/cnm/cgvChart/movieChart/30001192">영화 정보</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <div class="movie-card__poster">
+          <img class="movie-card__image" src="../media/poster_odyssey.jpg" alt="영화 오디세이 포스터" />
+          <span class="movie-card__badge">8/5 개봉</span>
+        </div>
+        <div class="movie-card__content">
+          <span class="movie-card__genre">모험 · 판타지</span>
+          <h2 class="movie-card__title">오디세이</h2>
+          <p class="movie-card__description">
+            이 시대 영화계 최고의 거장 크리스토퍼 놀란 감독의 새로운 신화
+            인류 최고의 고전 [오디세이아]가 스크린에 펼쳐진다!
+          </p>
+          <div class="movie-card__footer">
+            <span class="movie-card__status">보고 싶어요</span>
+            <a class="movie-card__button" href="https://cgv.co.kr/cnm/cgvChart/movieChart/30001323">영화 정보</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <div class="movie-card__poster">
+          <img class="movie-card__image" src="../media/poster_moana.jpg" alt="영화 모아나 포스터" />
+          <span class="movie-card__badge">개봉작</span>
+        </div>
+        <div class="movie-card__content">
+          <span class="movie-card__genre">모험 · 판타지</span>
+          <h2 class="movie-card__title">모아나</h2>
+          <p class="movie-card__description">
+            눈부신 파도, 거대한 모험, 그리고 운명을 바꿀 항해! 오감을 깨울 환상적인 바다가 생생하게 펼쳐진다!
+          </p>
+          <div class="movie-card__footer">
+            <span class="movie-card__status">보고 싶어요</span>
+            <a class="movie-card__button" href="https://cgv.co.kr/cnm/cgvChart/movieChart/30001282">영화 정보</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <div class="movie-card__poster">
+          <img class="movie-card__image" src="../media/poster_minians.jpg" alt="영화 미니언즈 &amp; 몬스터즈 포스터" />
+          <span class="movie-card__badge">개봉작</span>
+        </div>
+        <div class="movie-card__content">
+          <span class="movie-card__genre">애니메이션 · 코미디</span>
+          <h2 class="movie-card__title">미니언즈 & 몬스터즈</h2>
+          <p class="movie-card__description">
+            데뷔작으로 천만 관객 거장 감독이 되고 싶은 미니언즈 ‘제임스’, ‘헨리’, ‘에드’의 몬스터를 찾아 떠나는 어드벤처!
+          </p>
+          <div class="movie-card__footer">
+            <span class="movie-card__status">보고 싶어요</span>
+            <a class="movie-card__button" href="https://cgv.co.kr/cnm/cgvChart/movieChart/30001290">영화 정보</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="movie-card">
+        <div class="movie-card__poster">
+          <img class="movie-card__image" src="../media/poster_toystory.jpg" alt="영화 토이 스토리 5 포스터" />
+          <span class="movie-card__badge">개봉작</span>
+        </div>
+        <div class="movie-card__content">
+          <span class="movie-card__genre">애니메이션 · 모험</span>
+          <h2 class="movie-card__title">토이 스토리 5</h2>
+          <p class="movie-card__description">
+            "시대는 변해도, 친구들은 영원하다" 6월, 전 세계가 기다려온 디즈니·픽사 레전드 시리즈의 귀환
+          </p>
+          <div class="movie-card__footer">
+            <span class="movie-card__status">봤어요 !</span>
+            <a class="movie-card__button" href="https://cgv.co.kr/cnm/cgvChart/movieChart/30001231">영화 정보</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const themeButton = document.querySelector("#themeButton");
+
+    themeButton.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark");
+
+      themeButton.textContent = isDark ? "☀️" : "🌙";
+      themeButton.setAttribute("aria-pressed", String(isDark));
+      themeButton.setAttribute(
+        "aria-label",
+        isDark ? "라이트 모드로 전환" : "다크 모드로 전환"
+      );
+    });
+  </script>
+</body>
+</html>

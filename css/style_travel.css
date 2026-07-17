@@ -250,7 +250,7 @@ aside {
 
 .tip-icon {
   display: block;
-  position:static; /* 기존 absolute 해제 */
+  position:static;
   margin-top: 30px;
   margin-bottom:0px;
   margin-left: 0px;
