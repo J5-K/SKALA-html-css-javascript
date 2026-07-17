@@ -13,8 +13,8 @@
     <div class="topbar__right">
       <ul class="topbar__menu">
         <li><a href="#movies">영화 목록</a></li>
-        <li><a href="#">개봉 예정작</a></li>
-        <li><a href="#">나의 목록</a></li>
+        <li><a id="upcomingMenu" href="#movies">개봉 예정작</a></li>
+        <li><a href="https://cgv.co.kr/">예매하러 가기</a></li>
       </ul>
 
       <button
@@ -58,7 +58,7 @@
         </div>
       </article>
 
-      <article class="movie-card">
+      <article class="movie-card upcoming-movie">
         <div class="movie-card__poster">
           <img class="movie-card__image" src="../media/poster_spiderman.jpg" alt="영화 스파이더맨: 브랜드 뉴 데이 포스터" />
           <span class="movie-card__badge">7/29 개봉</span>
@@ -76,7 +76,7 @@
         </div>
       </article>
 
-      <article class="movie-card">
+      <article class="movie-card upcoming-movie">
         <div class="movie-card__poster">
           <img class="movie-card__image" src="../media/poster_odyssey.jpg" alt="영화 오디세이 포스터" />
           <span class="movie-card__badge">8/5 개봉</span>
@@ -153,6 +153,8 @@
 
   <script>
     const themeButton = document.querySelector("#themeButton");
+    const upcomingMenu =document.querySelector("#upcomingMenu");
+    const upcomingMovies = document.querySelectorAll(".upcoming-movie")
 
     themeButton.addEventListener("click", () => {
       const isDark = document.body.classList.toggle("dark");
@@ -163,6 +165,14 @@
         "aria-label",
         isDark ? "라이트 모드로 전환" : "다크 모드로 전환"
       );
+    });
+
+    upcomingMenu.addEventListener("mouseover", () => {
+      upcomingMovies.forEach((movie) => {
+        movie.classList.remove("blink");
+        void movie.offsetWidth;
+        movie.classList.add("blink");
+        });
     });
   </script>
 </body>
