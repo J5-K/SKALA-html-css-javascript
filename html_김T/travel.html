@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고흥 여행</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style_travel.css">
 </head>
 <body>
@@ -31,7 +34,7 @@
     </header>
 
     <main>
-        <section id="about" class="intro-section">
+        <section id="about" class="intro section">
             <div>
                 <p class="section-label">ABOUT GOHEUNG</p>
                 <h2> 바다 보고, 별 보고, 고흥! </h2>
@@ -41,20 +44,22 @@
                 자연과 미래가 조화롭게 공존하는 고흥에서 특별한 여행을 시작하세요.
             </p>
         </section>
-        <section id="attractions" class="attractions-section">
+        <section id="attractions" class="attractions section">
             <div class="section-heading">
                 <div> 
                     <p class="section-label">MUST VISIT</p>
                     <h2> 고흥의 추천 명소</h2>
                 </div>
-                <small> 사진 위에 마우스를 올려보세요 </small>
+                <p style="color: rgb(6, 107, 144); 
+                font-size: 15px; margin-bottom:0;"> 
+                    사진 위에 마우스를 올려보세요 </p>
             </div>
-            <div class ="gallary">
+            <div class ="gallery">
                 <figure class="place-card">
                     <div class="image-frame">
                         <img src="../media/나로우주센터.png"
-                        alt="우주를 향해 나아가는 고흥"> alt가 뭐햐는거야 여기서?
-                        <span>01</span>
+                        alt="우주를 향해 나아가는 고흥">
+                        <span><b>01</b></span>
                     </div>
                     <figcaption>
                         <h3>나로우주센터</h3>
@@ -65,7 +70,7 @@
                     <div class="image-frame">
                         <img src="../media/남열해수욕장.png"
                         alt="고흥의 노을 풍경">
-                        <span>02</span>
+                        <span><b>02</b></span>
                     </div>
                     <figcaption>
                         <h3>남열해수욕장</h3>
@@ -76,7 +81,7 @@
                     <div class="image-frame">
                         <img src="../media/쑥섬.png"
                         alt="나만 알고싶은 섬, 쑥섬">
-                        <span>03</span>
+                        <span><b>03</b></span>
                     </div>
                     <figcaption>
                         <h3>쑥섬</h3>
@@ -85,7 +90,7 @@
                 </figure>
             </div>
         </section>
-        <section id="food" class="food-section">
+        <section id="food" class="food section">
             <div class="section-food">
                 <article>
                     <p class="section-label">TASTE OF GOHEUNG</p>
@@ -95,10 +100,10 @@
                         <strong>01</strong>
                         <span>
                             <b><a target="_blank" 
-                                href="https://map.naver.com/p/search/%ED%8F%89%ED%99%94%EA%B5%AD%EB%B0%A5/place/
-                                17208232?placePath=/home?bk_query=%ED%8F%89%ED%99%94%EA%B5%AD%EB%B0%A5&entry=pll&from=nx&fromNxList=
-                                true&from=map&fromPanelNum=2&timestamp=202607171019&locale=ko&svcName=map_pcv5&searchText=%ED%8F%89%
-                                ED%99%94%EA%B5%AD%EB%B0%A5&searchType=place" >평화국밥</a></b>
+                                href="https://map.naver.com/p/search/%ED%8F%89%ED%99%94%EA%B5%AD%EB%B0%A5/place/17208232?c=15.00,0,0,0,
+                                dh&placePath=%2Fhome%3Fbk_query%3D%ED%8F%89%ED%99%94%EA%B5%AD%EB%B0%A5%26entry%3Dbmp%26from%3Dmap%26fromPanelNum%3D2%26times
+                                tamp%3D202607171937%26locale%3Dko%26svcName%3Dmap_pcv5%26searchText%3D%ED%8F%89%ED%99%94%EA%B5%AD%EB%B0%A5" >평화국밥</b></a>
+                            <small>△바로가기</small>
                             점심만 오픈하는 웨이팅 맛집
                         </span>
                     </div>
@@ -108,6 +113,7 @@
                             <b><a target="_blank"
                             href="https://map.naver.com/p/entry/place/1285499340?c=15.00,0,0,0,dh&placePath=%2Fhome%3Ffrom%3Dmap%26from
                             PanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607171024%26locale%3Dko%26svcName%3Dmap_pcv5">우주로 돌짜장</a></b>
+                            <small>△바로가기</small>
                             돌판해물짜장과 얼큰한 해물짬뽕 맛집
                         </span>
                     </div>
@@ -120,7 +126,7 @@
                     </div>
                 </article>
                 <aside class="tip-box">
-                    <p class="tip-icon" aria-hidden="true">✨</p>
+                    <span class="tip-icon">🌟</span>
                     <p class="section-label">LOCAL TIP</p>
                     <h3>조금 더 맛있게 즐기는 법</h3>
                     <ul>
@@ -131,7 +137,7 @@
                 </aside>
             </div>
         </section>
-        <section id="video" class="video-section">
+        <section id="video" class="video section">
             <div class="section-heading">
                 <div>
                     <p class="section-label">GO, GOHEUNG !</p>
@@ -142,16 +148,18 @@
                     <source src="../media/고흥홍보영상.mp4" type="video/mp4">
                     </video>
                     <figcaption> 
-                        출처: Youtube 채널 「내 마음 가장 가까운 곳 [고흥]」
+                        출처:  Youtube 채널  ⌜내 마음 가장 가까운 곳 [고흥]⌟
                     </figcaption>
                 </figure>
                 
             </div>
         </section>
         <footer>
-            <a class="footer-goheung" href="#home">GO흥!</a>
-            <p>마음이 맑아지는 여행, 고흥</p>
-            <P class="copyright">© 2026 JUOH GOHEUNG TRAVEL </P>
+            <a class="footer-home" href="#home">
+                <strong>GO흥!<strong>
+                <p>마음이 맑아지는 여행, 고흥</p>
+                <p class="copyright">© 2026 JUOH GOHEUNG TRAVEL </P>
+            </a>
         </footer>
     </main>
 </body>

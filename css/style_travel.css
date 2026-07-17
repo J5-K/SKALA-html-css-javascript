@@ -1,13 +1,276 @@
-.hero {
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(241, 188, 188, 0.305),
-      rgba(0, 0, 0, 0.15)
-    ),
-    url("../media/고흥우주센터.png");
+:root {
+  --night: #001b6aee;
+  --white: #fffdf8;
+  --yellow: rgb(240, 205, 9);
+  --cream: rgb(252, 248, 220);
+  --mute: #b7bcbd;
+}
+  html{ scroll-behavior: smooth;}
 
+* {box-sizing: border-box;}
+
+.hero {
+  color: #ffffff;
+  background:
+    linear-gradient(90deg, #0d2b23db 0%, #0d2b237a 10%, #0d2b231f 100%), 
+    url("../media/고흥우주센터.png") 50% 56% / cover;
+  min-height: 85vh;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
+}
+
+.hero h1 {
+  font-size: 70px;
+  line-height: 1.2;
+}
+
+.hero-button {
+  border-bottom: 1px solid #ffffff;
+  align-items: center;
+  margin-top: 20px;
+  padding: 14px 20px;
+  font-size: 30px;
+  font-weight: 700;
+  display: inline-flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--yellow);
+}
+
+small {
+  color: blue;
+  font-size: 13px;
+  line-height: 5px;
+  
+}
+
+p, span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+*, ::after,::before, ::backdrop {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-left: 0;
+  border: 0 solid;
+  padding: 0;
+}
+
+header {
+  display: inline-flexbox;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+body {
+  color: var();
+  background-color: var(--cream);
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+}
+
+.fixed-nav {
+  z-index: 100;
+  font-size: 20px;
+  font-weight: 600;
+  color:#ffffff;
+  background-color: var(--night); 
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  
+  margin: 0 auto;
+  padding: 20px 60px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.eyebrow {
+  color:#a5f2ffee;
+  margin-bottom: 20px;
+}
+
+.section-label {
+  color:#0b38beee;
+  padding:0;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.eyebrow, .section-label {
+  letter-spacing: .2em;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  padding: 100px 60px;
+  align-items: center;
+}
+
+
+.gallery {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.image-frame {
+  width: 100%;
+  min-width: 0;
+}
+
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.image-frame:hover img {
+  transform: scale(1.08);
+}
+
+.image-frame h3,
+.image-frame p {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section{
+  padding-top: 100px;
+  padding-left: 50px;
+  border-bottom: 1.3px solid var(--night);
+ 
+}
+
+.section-food {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+@media (width <= 760px) {
+    .intro, .section-food {
+        grid-template-columns: 1fr;
+        gap: 100px;
+    }
+}
+
+.food-list {
+    border-top: 1px solid var(--mute);
+    gap: 28px;
+    padding: 22px 0;
+    line-height: 25px;
+    display: flex;
+}
+.food-list span {
+  display: grid;
+  grid-template-columns: 1fr ;
+  align-items: start;
+  column-gap: 5px;
+  row-gap: 10px;
+  width: 100%;
+}
+
+aside {
+  width: 75%;
+  justify-self: end;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.tip-box {
+  background-color: var(--night);
+  color:#ffffff;
+  box-sizing: border-box;
+}
+
+.tip-box ul {
+  margin-bottom:0;
+  padding-left: 50px;
+  list-style: square;
+  gap: 10px;
+}
+
+.tip-box li {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 2;
+  word-break: keep-all;
+}
+
+.tip-box .section-label {
+  color: var(--yellow)
+}
+
+.tip-icon {
+  display: block;
+  position:static; /* 기존 absolute 해제 */
+  margin-top: 30px;
+  margin-bottom:0px;
+  margin-left: 0px;
+  font-size: 30px;
+  padding:0;
+  line-height: 0;
+}
+
+.tip-box h3 {
+  line-height: 1.2;
+}
+
+.lead {
+  margin-top:1px;
+  line-height:1px;
+}
+
+footer {
+  text-align: center;
+  color:#ffffff;
+  background-color: var(--night);
+  padding: 30px 7vw 32px;
 }
