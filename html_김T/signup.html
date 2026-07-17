@@ -20,22 +20,49 @@
             z-index: 100;
             border-bottom: 1px solid #ccc;
             border-radius: 0px 0px 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            
         }
-
+        .opening {
+            
+            padding: 100px 20px 30px;
+            font-size:30px;
+            text-align: center;
+            color:rgb(159, 95, 17);
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 150px 20px 30px;
-            /* 위쪽 150px로 고정 헤더 공간 확보 */
+            padding: 0px 20px 30px;
+        }
+        .button {
+            color:#aa0606;
+            background-color:rgb(137, 225, 197);
+            border-radius: 999px;
+            font-size: 16px;
+            padding: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, 
+            transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .button:hover {
+            background-color: #dc71ce;
+            box-shadow: none;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
    <header class="header">
-        <h2>👤 회원가입</h2>
-        <p>SKALA 광주 3반 2조의 회원가입을 환영합니다.</p>
+        <h2>👤 회원가입</h2> 
+        <a class="button" href="my_intro_page.html">소개 페이지로 돌아가기</a>
     </header>
-
+    <div class="opening">
+        <h2>SKALA 광주 3반 2조의 회원가입을 환영합니다!</h2>
+    </div>
     <div class="container">
         <form action="result.html" method="get">
             <fieldset>
@@ -128,5 +155,8 @@
         </form>
 
     </div>
+    <script>
+        userBirth.max = new Date().toLocaleDateString("sv-SE");
+    </script>
 </body>
 </html>
