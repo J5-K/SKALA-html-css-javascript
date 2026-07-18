@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터랙티브 할 일 관리</title>
+    <link rel="stylesheet" href="../css/style_app.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <p id="quote" class="quote">오늘의 한마디를 불러오는 중...</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="새로운 할 일을 입력하세요">
+            <button id="add-btn">추가</button>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="active">진행중</button>
+            <button class="filter-btn" data-filter="completed">완료</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+        <div class="summary-section">
+            <span>전체: <strong id="summary-total">0</strong>개</span>
+            <span>완료: <strong id="summary-completed">0</strong>개</span>
+        </div>
+    </div>
+
+    <script type="module" src="../script/app.js"></script>
+</body>
+</html>
